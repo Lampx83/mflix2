@@ -17,8 +17,8 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Genres
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown" th:with="genres=#{genres}">
-                        <li th:each="gen:${#strings.arraySplit(genres,',')}"><a class="dropdown-item" th:href="@{/search(by='genres',value=${gen})}"><span th:text="${gen}"></span></a></li>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li th:each="gen:${genres}"><a class="dropdown-item" th:href="@{/search(by='genres',value=${gen})}"><span th:text="${gen}"></span></a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
